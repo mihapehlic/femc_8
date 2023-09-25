@@ -1,0 +1,172 @@
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8125rem;
+  padding: 1.5rem;
+  background-color: var(--light-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.card-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  border-radius: 15px;
+  box-shadow: 15px 15px 100px hsl(214, 17%, 85%);
+  margin-bottom: 2rem;
+}
+
+.card-container .hero-img {
+  max-height: 15rem;
+  min-width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.card-content h1 {
+  font-size: 1.2rem;
+  color: var(--very-dark-grayish-blue);
+  margin-bottom: 1rem;
+}
+
+.card-content .card-content-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--desaturated-dark-blue);
+  margin-bottom: 2rem;
+}
+
+.flex-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.share-option {
+  background-color: var(--very-dark-grayish-blue);
+  color: #fff;
+  position: absolute;
+  width: calc(100% + 4rem);
+  left: -2rem;
+  bottom: -2rem;
+  border-radius: 0 0 15px 15px;
+  padding: 2rem 2.4rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.share-option div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5rem;
+}
+
+.share-option div:nth-child(2) {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+.share-option div:nth-child(2) img {
+  height: 17px;
+}
+
+.card-user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card-user .user-img {
+  border-radius: 50%;
+  max-width: 3rem;
+}
+
+.card-user-info h2 {
+  font-size: 1rem;
+  color: var(--very-dark-grayish-blue);
+  margin-bottom: 0.2rem;
+}
+
+.card-user-info p {
+  color: var(--grayish-blue);
+}
+
+.share-icon {
+  padding: 0.7rem;
+  background-color: var(--light-grayish-blue);
+  border-radius: 50%;
+}
+
+.share-icon img {
+  height: 17px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1000px) {
+  .card-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    max-width: 52rem;
+    border-radius: 15px;
+    box-shadow: 15px 15px 100px hsl(214, 17%, 85%);
+  }
+
+  .card-container .hero-img {
+    min-height: 100%;
+    max-width: 20rem;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+    margin-bottom: 0;
+  }
+
+  .card-content {
+    padding: 2rem 3.5rem 2rem;
+  }
+}
